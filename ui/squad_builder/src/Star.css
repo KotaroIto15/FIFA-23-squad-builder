@@ -1,0 +1,10 @@
+.star-div {
+    background-color: #414649;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.star {
+    color: Yellow;
+    font-size: 25px;
+}

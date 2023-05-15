@@ -1,0 +1,7 @@
+.field-container {
+    height: auto;
+    min-height: 1600px;
+    background-image: url("./images/soccer_field.jpg");
+    background-size: cover;
+    margin-bottom: 20px;
+}

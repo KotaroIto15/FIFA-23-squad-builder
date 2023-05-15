@@ -1,0 +1,24 @@
+.search-page {
+    margin-top: 2rem;
+    background-image: linear-gradient(to bottom right, #1f2d6a, black);
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 7px 7px 5px #1f2d6a;
+}
+
+.search-title {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.player-search .MuiOutlinedInput-notchedOutline {
+    border-color: black !important;
+}
+
+.results {
+    width: 100%;
+}

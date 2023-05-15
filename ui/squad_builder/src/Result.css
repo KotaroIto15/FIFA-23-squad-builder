@@ -1,0 +1,38 @@
+.result-box {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    border-color: red;
+}
+
+.result-box:hover {
+    background-color: gray;
+}
+
+.player-img {
+    height: 70px;
+    width: auto;
+}
+
+.player-info {
+    justify-content: center;
+    color: white;
+    font-family: Cambria, Georgia, serif;
+    font-weight: bold;
+    font-size: large;
+    font-style: italic;
+}
+
+.not-found {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-color: red;
+    color: white;
+}

@@ -1,0 +1,40 @@
+.player-box {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.info-box {
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background-image: linear-gradient(to bottom right, #1f2d6a, black);
+    color: white;
+    font-family: Georgia;
+}
+
+.gray-box {
+    width: 100px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+.gray-box:hover {
+    background-color: darkgray;
+}
+
+.gray-box:focus {
+    background-color: orange;
+}
+
+.add-icon {
+    color: white;
+}

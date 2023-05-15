@@ -1,0 +1,12 @@
+#formation-label {
+    color: white;
+}
+
+#formation-dropdown {
+    font-style: italic;
+    color: #43FCA5;
+}
+
+.formation-select .MuiOutlinedInput-notchedOutline {
+    border-color: #43FCA5 !important;
+}

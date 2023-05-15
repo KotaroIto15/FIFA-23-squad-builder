@@ -1,0 +1,25 @@
+.formation-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#wb {
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.formation-box {
+    height: auto;
+    min-height: 1600px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+h1 {
+    color: red;
+}

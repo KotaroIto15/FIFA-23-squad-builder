@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+  background-color: #18202e;
+  min-height: 100%;
+  height: auto;
+}
+
+.app-title {
+  padding: 3rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  color: #02ab86;
+}
+
+.black-box {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: black;
+  width: vh100;
+  height: auto;
+  min-height: 1600px;
+  opacity: 0.5;
+}
+
+.normal {
+  opacity: 1;
+}
+
+.star-formation {
+  align-items: center;
+  opacity: 1;
+}
+
+.search-box {
+  align-items: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
