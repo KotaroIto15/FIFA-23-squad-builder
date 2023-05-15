@@ -5,6 +5,8 @@ import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 import Field from "./Field";
 import Star from "./Star";
@@ -20,6 +22,12 @@ function App() {
     ["number", -1],
   ]));
   const [players, setPlayers] = useState(new Array(11));
+  const [squadName, setSquadName] = useState("");
+
+  const saveSquad = () => {
+    
+    console.log(squadName);
+  }
 
   return (
     <div className="App">
@@ -45,6 +53,41 @@ function App() {
               <Row className='search-box'>
                 <Col xs={12}>
                   {showSearch ? <Search players = {players} setPlayers = {setPlayers} index = {index} /> : null}
+                </Col>
+              </Row>
+              <Row className='save-box'>
+                <Col xs={10}>
+                  <TextField
+                    id="squad-name"
+                    className='squad-name'
+                    label="Save as ... "
+                    value={squadName}
+                    sx={{
+                      label: {
+                        color: "#02ab86",
+                        fontStyle: "italic",
+                        fontWeight: "bold"
+                      },
+                      input: {
+                        color: "#02ab86",
+                        fontStyle: "italic",
+                        fontWeight: "bold"
+                      }
+                    }}
+                    onChange={(e)=>{setSquadName(e.target.value);}}
+                    fullWidth
+                  />
+                </Col>
+                <Col xs={2}>
+                  <Button 
+                    variant='contained'
+                    onClick={()=>{
+                      if(squadName === "") alert("Squad name is empty!!");
+                      else saveSquad();
+                    }}
+                  >
+                    Save
+                  </Button>
                 </Col>
               </Row>
             </Container>

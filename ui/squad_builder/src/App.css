@@ -40,11 +40,12 @@
   align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.save-box {
+  justify-content: center;
+  align-items: center;
+}
+
+.squad-name .MuiOutlinedInput-notchedOutline {
+  border-color: #02ab86 !important;
+  border-width: 2px;
 }
