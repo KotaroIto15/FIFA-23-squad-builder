@@ -25,8 +25,41 @@ function App() {
   const [squadName, setSquadName] = useState("");
 
   const saveSquad = () => {
-    
-    console.log(squadName);
+    const requestOptions = {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: squadName,
+        squads: JSON.stringify(players)
+      })
+    }
+
+    fetch("http://localhost:9000/apis/data/save", requestOptions)
+    .then((response) => response.json())
+    .then((data) => {console.log(data);})
+    .catch((err)=> {console.log(err.message);});
+
+    setSquadName("");
+  }
+
+  const loadSquad = () => {
+    const name = squadName.replaceAll(" ", "-");
+    const url = "http://localhost:9000/apis/data/load/" + name;
+
+    console.log(url);
+
+    fetch(url)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      setPlayers(JSON.parse(data.squad));
+    });
+
+    setSquadName("");
   }
 
   return (
@@ -55,12 +88,12 @@ function App() {
                   {showSearch ? <Search players = {players} setPlayers = {setPlayers} index = {index} /> : null}
                 </Col>
               </Row>
-              <Row className='save-box'>
-                <Col xs={10}>
+              <Row className='name-box'>
+                <Col xs={12}>
                   <TextField
                     id="squad-name"
                     className='squad-name'
-                    label="Save as ... "
+                    label="Squad Name"
                     value={squadName}
                     sx={{
                       label: {
@@ -78,15 +111,30 @@ function App() {
                     fullWidth
                   />
                 </Col>
-                <Col xs={2}>
+              </Row>
+              <Row className='buttons'>
+                <Col xs={6}>
                   <Button 
                     variant='contained'
+                    size='large'
                     onClick={()=>{
                       if(squadName === "") alert("Squad name is empty!!");
                       else saveSquad();
                     }}
                   >
                     Save
+                  </Button>
+                </Col>
+                <Col xs={6}>
+                  <Button 
+                    variant='contained'
+                    size='large'
+                    onClick={()=>{
+                      if(squadName === "") alert("Squad name is empty!!");
+                      else loadSquad();
+                    }}
+                  >
+                    Load
                   </Button>
                 </Col>
               </Row>

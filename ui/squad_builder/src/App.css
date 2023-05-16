@@ -40,8 +40,15 @@
   align-items: center;
 }
 
-.save-box {
+.name-box {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  justify-content: space-around;
   align-items: center;
 }
 
