@@ -9,7 +9,26 @@ const Star = ({players}) => {
     const [starVal, setStarVal] = useState(0);
 
     useEffect(() => {
-        setStarVal(calculateCompetitiveness());
+
+        const requestOptions = {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              squads: JSON.stringify(players)
+            })
+        };
+
+        fetch("http://localhost:9000/apis/data/star", requestOptions)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            setStarVal(data);
+        })
+        .catch((err)=> {console.log(err.message);});
+
     }, [players]);
 
     const calculateCompetitiveness = () => {
